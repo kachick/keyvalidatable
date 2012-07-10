@@ -1,0 +1,9 @@
+README.rdoc
+LICENSE
+History.rdoc
+Manifest.txt
+Rakefile
+lib/keyvalidatable.rb
+lib/keyvalidatable/core_ext.rb
+dspec/basic.rb
+example/readme.rb

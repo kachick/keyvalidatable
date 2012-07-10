@@ -1,0 +1,47 @@
+= keyvalidatable
+
+code :: https://github.com/kachick/keyvalidatable
+bugs :: https://github.com/kachick/keyvalidatable/issue
+
+== Description
+
+Validate pairs(Hash, Struct) keys.
+
+== Usage
+
+    require 'keyvalidatable'
+    require 'keyvalidatable/core_ext'
+    
+    class MyClass
+
+      def my_method(options)
+        options.validate_keys(must: [:a, :b], let: [:c])
+
+        "#{options} is valid"
+      rescue
+        "#{options} is invalid"
+      end
+
+    end
+
+    my_obj = MyClass.new
+    p my_obj.my_method(a: 1, b: 2, c: 3)       #=> "{:a=>1, :b=>2, :c=>3} is valid"
+    p my_obj.my_method(a: 1, c: 3)             #=> "{:a=>1, :c=>3} is invalid"
+    p my_obj.my_method(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
+    p my_obj.my_method(a: 1, b: 2, c: 3, d: 4) #=> "{:a=>1, :b=>2, :c=>3, :d=>4} is invalid"
+
+== Requirements
+
+Ruby 1.9.2 or later
+
+== Installation
+
+gem install keyvalidatable
+
+== License
+
+The MIT X11 License
+
+Copyright (c) 2012 Kenichi Kamiya
+
+See the file LICENSE for further details.
