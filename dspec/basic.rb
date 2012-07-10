@@ -27,7 +27,7 @@ Declare do
       EQUAL false
     end
     
-    CATCH KeyError do
+    CATCH KeyValidatable::InvalidKeysError do
       shortage.validate_keys(requirements)
     end
   end
@@ -37,7 +37,7 @@ Declare do
       EQUAL false
     end
     
-    CATCH KeyError do
+    CATCH KeyValidatable::InvalidKeysError do
       excess.validate_keys(requirements)
     end
   end
