@@ -4,6 +4,11 @@ History.rdoc
 Manifest.txt
 Rakefile
 lib/keyvalidatable.rb
+lib/keyvalidatable/loader.rb
+lib/keyvalidatable/version.rb
+lib/keyvalidatable/errors.rb
+lib/keyvalidatable/singletonclass.rb
+lib/keyvalidatable/instancemethods.rb
 lib/keyvalidatable/core_ext.rb
 declared/basic.rb
 declared/let.rb

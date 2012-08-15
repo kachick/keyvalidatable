@@ -1,6 +1,5 @@
 $VERBOSE = true
 
-require_relative '../lib/keyvalidatable'
 require_relative '../lib/keyvalidatable/core_ext'
 require 'declare'
 

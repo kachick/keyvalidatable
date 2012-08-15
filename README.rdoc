@@ -9,7 +9,6 @@ Validate pair-object(Hash, Struct) keys.
 
 == Usage
 
-    require 'keyvalidatable'
     require 'keyvalidatable/core_ext'
     
     class MyClass
@@ -36,11 +35,11 @@ Ruby 1.9.2 or later
 
 == Installation
 
-gem install keyvalidatable
+    gem install keyvalidatable
 
 == License
 
-The MIT X11 License
+The MIT X License
 
 Copyright (c) 2012 Kenichi Kamiya
 

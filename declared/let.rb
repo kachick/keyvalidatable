@@ -1,6 +1,5 @@
 $VERBOSE = true
 
-require_relative '../lib/keyvalidatable'
 require_relative '../lib/keyvalidatable/core_ext'
 require 'declare'
 
@@ -18,6 +17,16 @@ Declare do
     end
     
     The sufficient.validate_keys(requirements) do
+      EQUAL nil
+    end
+  end
+  
+  The({}) do |empty|
+    The empty.valid_keys?(requirements) do
+      EQUAL true
+    end
+    
+    The empty.validate_keys(requirements) do
       EQUAL nil
     end
   end
