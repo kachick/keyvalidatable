@@ -1,6 +1,9 @@
 keyvalidatable
 ==============
 
+
+[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
+
 Description
 -----------
 
@@ -43,7 +46,7 @@ Requirements
 
 * Ruby 1.9.2 or later
 
-  MRI/YARV, Rubinius, JRuby: http://travis-ci.org/#!/kachick/keyvalidatable
+  [MRI/YARV, Rubinius, JRuby](http://travis-ci.org/#!/kachick/keyvalidatable)
 
 Install
 -------
