@@ -1,8 +1,10 @@
-README.rdoc
+README.md
 LICENSE
-History.rdoc
+History.md
 Manifest.txt
 Rakefile
+Gemfile
+keyvalidatable.gemspec
 lib/keyvalidatable.rb
 lib/keyvalidatable/loader.rb
 lib/keyvalidatable/version.rb
@@ -10,6 +12,7 @@ lib/keyvalidatable/errors.rb
 lib/keyvalidatable/singletonclass.rb
 lib/keyvalidatable/instancemethods.rb
 lib/keyvalidatable/core_ext.rb
-declared/basic.rb
-declared/let.rb
+test/test_helper.rb
+test/test_basic.rb
+test/test_let.rb
 examples/README.rb
