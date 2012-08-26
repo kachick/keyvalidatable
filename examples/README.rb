@@ -1,12 +1,11 @@
 $VERBOSE = true
 
 require_relative '../lib/keyvalidatable'
-require_relative '../lib/keyvalidatable/core_ext'
 
 class MyClass
 
   def my_method(options)
-    options.validate_keys(must: [:a, :b], let: [:c])
+    options.dup.extend(KeyValidatable).validate_keys(must: [:a, :b], let: [:c])
 
     p "#{options} is valid"
   rescue
