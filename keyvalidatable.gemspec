@@ -19,6 +19,5 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>=1.9.2'
   gem.add_development_dependency 'test-declare', '~>0.0.1'
   gem.add_development_dependency 'yard', '>=0.8.2.1'
-  gem.add_development_dependency 'redcarpet'
 end
 
