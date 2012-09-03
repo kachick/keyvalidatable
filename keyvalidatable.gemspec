@@ -6,7 +6,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
   gem.summary       = %q{Validate pair-object's key.}
-  gem.description   = %q{e.g. Check option parameters are valid for a method.}
+  gem.description   = %q{Validate pair-object's key.
+e.g. Check option parameters are valid for a method.}
   gem.homepage      = 'https://github.com/kachick/keyvalidatable'
 
   gem.files         = `git ls-files`.split($\)

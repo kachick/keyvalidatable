@@ -21,7 +21,7 @@ Usage
 ```ruby
 require 'keyvalidatable'
     
-class MyClass
+class Foo
 
   def func(options)
     options.dup.extend(KeyValidatable).validate_keys(must: [:a, :b], let: [:c])
@@ -33,11 +33,11 @@ class MyClass
 
 end
 
-my_obj = MyClass.new
-my_obj.func(a: 1, b: 2, c: 3)       #=> "{:a=>1, :b=>2, :c=>3} is valid"
-my_obj.func(a: 1, c: 3)             #=> InvalidKeysError: Shortage: [:b] / Excess: []
-my_obj.func(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
-my_obj.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:d]
+foo = Foo.new
+foo.func(a: 1, b: 2, c: 3)       #=> "{:a=>1, :b=>2, :c=>3} is valid"
+foo.func(a: 1, c: 3)             #=> InvalidKeysError: Shortage: [:b] / Excess: []
+foo.func(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
+foo.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:d]
 ```
 
 Requirements
