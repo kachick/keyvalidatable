@@ -1,7 +1,6 @@
 keyvalidatable
 ==============
 
-
 [![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
 
 Description
@@ -24,7 +23,7 @@ require 'keyvalidatable'
     
 class MyClass
 
-  def my_method(options)
+  def func(options)
     options.dup.extend(KeyValidatable).validate_keys(must: [:a, :b], let: [:c])
 
     p "#{options} is valid"
@@ -35,18 +34,16 @@ class MyClass
 end
 
 my_obj = MyClass.new
-my_obj.my_method(a: 1, b: 2, c: 3)       #=> "{:a=>1, :b=>2, :c=>3} is valid"
-my_obj.my_method(a: 1, c: 3)             #=> InvalidKeysError: Shortage: [:b] / Excess: []
-my_obj.my_method(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
-my_obj.my_method(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:d]
+my_obj.func(a: 1, b: 2, c: 3)       #=> "{:a=>1, :b=>2, :c=>3} is valid"
+my_obj.func(a: 1, c: 3)             #=> InvalidKeysError: Shortage: [:b] / Excess: []
+my_obj.func(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
+my_obj.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:d]
 ```
 
 Requirements
 ------------
 
-* Ruby 1.9.2 or later
-
-  [MRI/YARV, Rubinius, JRuby](http://travis-ci.org/#!/kachick/keyvalidatable)
+* Ruby 1.9.2 or later [MRI/YARV, Rubinius, JRuby](http://travis-ci.org/#!/kachick/keyvalidatable)
 
 Install
 -------
@@ -58,17 +55,15 @@ $ gem install keyvalidatable
 Link
 ----
 
-* code: https://github.com/kachick/keyvalidatable
-* issues: https://github.com/kachick/keyvalidatable/issues
-* CI: http://travis-ci.org/#!/kachick/keyvalidatable
-* gem: https://rubygems.org/gems/keyvalidatable
-* gem+: http://metagem.info/gems/keyvalidatable
+* [code](https://github.com/kachick/keyvalidatable)
+* [issues](https://github.com/kachick/keyvalidatable/issues)
+* [CI](http://travis-ci.org/#!/kachick/keyvalidatable)
+* [gem](https://rubygems.org/gems/keyvalidatable)
+* [gem+](http://metagem.info/gems/keyvalidatable)
 
 License
 -------
 
-The MIT X License
-
-Copyright (c) 2012 Kenichi Kamiya
-
+The MIT X License  
+Copyright (c) 2012 Kenichi Kamiya  
 See the file LICENSE for further details.

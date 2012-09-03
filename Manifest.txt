@@ -6,11 +6,11 @@ Rakefile
 Gemfile
 keyvalidatable.gemspec
 lib/keyvalidatable.rb
-lib/keyvalidatable/loader.rb
+lib/keyvalidatable/requirements.rb
 lib/keyvalidatable/version.rb
 lib/keyvalidatable/errors.rb
-lib/keyvalidatable/singletonclass.rb
-lib/keyvalidatable/instancemethods.rb
+lib/keyvalidatable/singleton_class.rb
+lib/keyvalidatable/instance.rb
 lib/keyvalidatable/core_ext.rb
 test/test_helper.rb
 test/test_basic.rb
