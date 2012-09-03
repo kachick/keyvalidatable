@@ -13,6 +13,8 @@ lib/keyvalidatable/singleton_class.rb
 lib/keyvalidatable/instance.rb
 lib/keyvalidatable/core_ext.rb
 test/test_helper.rb
-test/test_basic.rb
-test/test_let.rb
+test/test_basic_from_hash.rb
+test/test_let_from_hash.rb
+test/test_basic_from_struct.rb
+test/test_let_from_struct.rb
 examples/README.rb

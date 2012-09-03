@@ -44,13 +44,14 @@ module KeyValidatable
     private
     
     def shortage_keys(key_value_pairs, musts)
-      musts - key_value_pairs.keys
+      musts - keys_for(key_value_pairs)
     end
     
     def excess_keys(key_value_pairs, musts, lets)
-      (key_value_pairs.keys - musts) - lets
+      (keys_for(key_value_pairs) - musts) - lets
     end
     
+    # @param [Hash] requirements
     def assert_requirements(requirements)
       raise ArgumentError unless requirements.respond_to? :keys
 
@@ -89,6 +90,19 @@ module KeyValidatable
     
     def lets_for(requirements)
       requirements[:let] || []
+    end
+    
+    # @param [Hash, Struct, #keys, #members] key_value_pairs
+    def keys_for(key_value_pairs)
+      if key_value_pairs.respond_to? :keys
+        key_value_pairs.keys
+      else
+        if key_value_pairs.respond_to? :members
+          key_value_pairs.members
+        else
+          raise TypeError
+        end
+      end
     end
   
   end
