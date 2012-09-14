@@ -43,7 +43,7 @@ foo.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:
 Requirements
 ------------
 
-* Ruby 1.9.2 or later [MRI/YARV, Rubinius, JRuby](http://travis-ci.org/#!/kachick/keyvalidatable)
+* Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/keyvalidatable)
 
 Install
 -------
@@ -56,14 +56,14 @@ Link
 ----
 
 * [code](https://github.com/kachick/keyvalidatable)
+* [API](http://kachick.github.com/keyvalidatable/yard/frames.html)
 * [issues](https://github.com/kachick/keyvalidatable/issues)
 * [CI](http://travis-ci.org/#!/kachick/keyvalidatable)
 * [gem](https://rubygems.org/gems/keyvalidatable)
-* [gem+](http://metagem.info/gems/keyvalidatable)
 
 License
 -------
 
-The MIT X License  
+The MIT X11 License  
 Copyright (c) 2012 Kenichi Kamiya  
 See the file LICENSE for further details.

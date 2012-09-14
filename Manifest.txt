@@ -5,6 +5,7 @@ Manifest.txt
 Rakefile
 Gemfile
 keyvalidatable.gemspec
+
 lib/keyvalidatable.rb
 lib/keyvalidatable/requirements.rb
 lib/keyvalidatable/version.rb
@@ -12,9 +13,11 @@ lib/keyvalidatable/errors.rb
 lib/keyvalidatable/singleton_class.rb
 lib/keyvalidatable/instance.rb
 lib/keyvalidatable/core_ext.rb
+
 test/test_helper.rb
 test/test_basic_from_hash.rb
 test/test_let_from_hash.rb
 test/test_basic_from_struct.rb
 test/test_let_from_struct.rb
-examples/README.rb
+
+example/README.rb
