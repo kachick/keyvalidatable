@@ -5,6 +5,8 @@ require_relative 'keyvalidatable/singleton_class'
 
 module KeyValidatable
 
+  # @group Instance methods for extended pair objects
+
   # @param [Hash] requirements
   def validate_keys(requirements)
     KeyValidatable.__send__ __callee__, self, requirements
@@ -19,5 +21,7 @@ module KeyValidatable
   end
   
   alias_method :valid_members?, :valid_keys?
+
+  # @endgroup
 
 end

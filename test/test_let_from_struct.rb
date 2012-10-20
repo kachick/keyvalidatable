@@ -1,7 +1,6 @@
 require 'test/declare'
 require_relative '../lib/keyvalidatable/core_ext'
 
-
 requirements = {let: [:b]}
 
 The(Struct.new(:a, :b, :c).new.valid_keys?(requirements)) do
