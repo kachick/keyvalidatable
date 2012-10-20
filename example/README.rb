@@ -5,7 +5,7 @@ require_relative '../lib/keyvalidatable'
 class MyClass
 
   def my_method(options)
-    options.dup.extend(KeyValidatable).validate_keys(must: [:a, :b], let: [:c])
+    KeyValidatable.validate_keys options, must: [:a, :b], let: [:c]
 
     p "#{options} is valid"
   rescue

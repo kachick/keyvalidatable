@@ -9,7 +9,7 @@ Validate shortage/excess keys in pairs.
 Usage
 -----
 
-### Validate option parameters(hash-arguments) for method
+### Validate option parameters(hash-argument)
 
 ```ruby
 require 'keyvalidatable'
@@ -17,7 +17,7 @@ require 'keyvalidatable'
 class Foo
 
   def func(options)
-    options.dup.extend(KeyValidatable).validate_keys(must: [:a, :b], let: [:c])
+    KeyValidatable.validate_keys options, must: [:a, :b], let: [:c]
 
     p "#{options} is valid"
   rescue
