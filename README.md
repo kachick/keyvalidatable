@@ -1,22 +1,15 @@
 keyvalidatable
 ==============
 
-[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
-
 Description
 -----------
 
-Validate pair-object's key.
-
-Features
---------
-
-* Check option parameters are valid for a method.
+Validate shortage/excess keys of pair objects.
 
 Usage
 -----
 
-### Overview
+### Validate option parameters(hash-arguments) for method
 
 ```ruby
 require 'keyvalidatable'
@@ -52,6 +45,11 @@ Install
 $ gem install keyvalidatable
 ```
 
+Build Status
+-------------
+
+[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
+
 Link
 ----
 
@@ -66,4 +64,4 @@ License
 
 The MIT X11 License  
 Copyright (c) 2012 Kenichi Kamiya  
-See the file LICENSE for further details.
+See MIT-LICENSE for further details.

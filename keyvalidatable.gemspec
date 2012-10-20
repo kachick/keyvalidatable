@@ -18,6 +18,6 @@ e.g. Check option parameters are valid for a method.}
   gem.required_ruby_version = '>= 1.9.2'
 
   gem.add_development_dependency 'test-declare', '~> 0.0.1'
-  gem.add_development_dependency 'yard', '>= 0.8.2.1'
+  gem.add_development_dependency 'yard', '~> 0.8'
 end
 
