@@ -4,7 +4,7 @@ keyvalidatable
 Description
 -----------
 
-Validate shortage/excess keys of pair objects.
+Validate shortage/excess keys in pairs.
 
 Usage
 -----
