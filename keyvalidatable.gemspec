@@ -1,5 +1,3 @@
-require File.expand_path('../lib/keyvalidatable/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
@@ -13,7 +11,7 @@ e.g. Check option parameters are valid for a method.}
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'keyvalidatable'
   gem.require_paths = ['lib']
-  gem.version       = KeyValidatable::VERSION.dup # dup for https://github.com/rubygems/rubygems/commit/48f1d869510dcd325d6566df7d0147a086905380#-P0
+  gem.version       = '0.0.4'
 
   gem.required_ruby_version = '>= 1.9.2'
 
