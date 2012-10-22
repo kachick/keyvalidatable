@@ -15,6 +15,10 @@ The(Struct.new(:a, :c).new) do |sufficient|
   The sufficient.validate_keys(requirements) do
     same nil
   end
+
+  The KeyValidatable.keys_for(sufficient) do
+    is [:a, :c]
+  end
 end
 
 The(Struct.new(:a, :b).new) do |shortage|
@@ -25,6 +29,10 @@ The(Struct.new(:a, :b).new) do |shortage|
   CATCH KeyValidatable::InvalidKeysError do
     shortage.validate_keys(requirements)
   end
+
+  The KeyValidatable.keys_for(shortage) do
+    is [:a, :b]
+  end
 end
 
 The(Struct.new(:a, :b, :c, :d).new) do |excess|
@@ -34,6 +42,10 @@ The(Struct.new(:a, :b, :c, :d).new) do |excess|
   
   CATCH KeyValidatable::InvalidKeysError do
     excess.validate_keys(requirements)
+  end
+
+  The KeyValidatable.keys_for(excess) do
+    is [:a, :b, :c, :d]
   end
 end
 

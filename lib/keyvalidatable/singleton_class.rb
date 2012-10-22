@@ -64,6 +64,30 @@ module KeyValidatable
       true
     end
 
+    # @param [Hash, #to_hash, #to_h, Struct, #keys, #members] key_value_pairs
+    # @return [Array]
+    def keys_for(key_value_pairs)
+      pairs = (
+        case
+        when key_value_pairs.respond_to?(:to_hash)
+          key_value_pairs.to_hash
+        when key_value_pairs.respond_to?(:to_h)
+          key_value_pairs.to_h
+        else
+          key_value_pairs
+        end
+      )
+
+      case
+      when pairs.respond_to?(:keys)
+        pairs.keys
+      when pairs.respond_to?(:members)
+        pairs.members
+      else
+        raise TypeError, "#{key_value_pairs.inspect} is not pairs object"
+      end
+    end
+
     private
 
     def shortage_elements(elements, musts)
@@ -113,29 +137,6 @@ module KeyValidatable
     
     def lets_for(requirements)
       requirements[:let] || []
-    end
-    
-    # @param [Hash, #to_hash, #to_h, Struct, #keys, #members] key_value_pairs
-    def keys_for(key_value_pairs)
-      pairs = (
-        case
-        when key_value_pairs.respond_to?(:to_hash)
-          key_value_pairs.to_hash
-        when key_value_pairs.respond_to?(:to_h)
-          key_value_pairs.to_h
-        else
-          key_value_pairs
-        end
-      )
-
-      case
-      when pairs.respond_to?(:keys)
-        pairs.keys
-      when pairs.respond_to?(:members)
-        pairs.members
-      else
-        raise TypeError, "#{key_value_pairs.inspect} is not pairs object"
-      end
     end
   
   end
