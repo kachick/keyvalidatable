@@ -36,7 +36,7 @@ foo.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:
 Requirements
 ------------
 
-* Ruby - [1.9.2 or later](http://travis-ci.org/#!/kachick/keyvalidatable)
+* Ruby - [1.9.3 or later](http://travis-ci.org/#!/kachick/keyvalidatable)
 
 Install
 -------

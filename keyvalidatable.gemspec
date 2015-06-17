@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.name          = lib_name.dup
   gem.version       = '0.0.5'
 
-  gem.required_ruby_version = '>= 1.9.2'
+  gem.required_ruby_version = '>= 1.9.3'
 
   gem.add_development_dependency 'yard', '>= 0.8.7.6', '< 0.9'
   gem.add_development_dependency 'rake', '~> 10'
