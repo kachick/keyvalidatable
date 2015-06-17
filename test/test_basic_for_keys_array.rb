@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 require_relative '../lib/keyvalidatable'
 require_relative 'helper'
 

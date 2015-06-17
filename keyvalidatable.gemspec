@@ -1,3 +1,5 @@
+# coding: us-ascii
+
 Gem::Specification.new do |gem|
   gem.authors       = ['Kenichi Kamiya']
   gem.email         = ['kachick1+ruby@gmail.com']
