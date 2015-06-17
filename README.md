@@ -1,6 +1,10 @@
 keyvalidatable
 ==============
 
+[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
+[![Gem Version](https://badge.fury.io/rb/keyvalidatable.png)](http://badge.fury.io/rb/keyvalidatable)
+[![Dependency Status](https://gemnasium.com/kachick/keyvalidatable.svg)](https://gemnasium.com/kachick/keyvalidatable)
+
 Description
 -----------
 
@@ -45,16 +49,11 @@ Install
 $ gem install keyvalidatable
 ```
 
-Build Status
--------------
-
-[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
-
 Link
 ----
 
 * [code](https://github.com/kachick/keyvalidatable)
-* [API](http://kachick.github.com/keyvalidatable/yard/frames.html)
+* [API](http://www.rubydoc.info/github/kachick/keyvalidatable)
 * [issues](https://github.com/kachick/keyvalidatable/issues)
 * [CI](http://travis-ci.org/#!/kachick/keyvalidatable)
 * [gem](https://rubygems.org/gems/keyvalidatable)
