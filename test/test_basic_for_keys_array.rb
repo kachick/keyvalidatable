@@ -1,5 +1,5 @@
 require_relative '../lib/keyvalidatable'
-require 'test/declare'
+require_relative 'helper'
 
 
 requirements = {must: [:a, :c], let: [:b]}

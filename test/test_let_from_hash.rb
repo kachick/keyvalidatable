@@ -1,4 +1,4 @@
-require 'test/declare'
+require_relative 'helper'
 require_relative '../lib/keyvalidatable/core_ext'
 
 

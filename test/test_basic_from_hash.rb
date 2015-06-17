@@ -1,4 +1,4 @@
-require 'test/declare'
+require_relative 'helper'
 require_relative '../lib/keyvalidatable/core_ext'
 
 requirements = {must: [:a, :c], let: [:b]}
@@ -49,4 +49,3 @@ The({a: nil, b: nil, c: nil, d: nil}) do |excess|
     is [:a, :b, :c, :d]
   end
 end
-
