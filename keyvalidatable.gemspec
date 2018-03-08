@@ -10,12 +10,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/kachick/#{lib_name}"
   gem.license       = 'MIT'
   gem.name          = lib_name.dup
-  gem.version       = '0.0.5.1'
+  gem.version       = '0.1.0'
 
-  gem.required_ruby_version = '>= 1.9.3'
+  gem.required_ruby_version = '>= 2.2'
 
-  gem.add_development_dependency 'yard', '>= 0.8.7.6', '< 0.9'
-  gem.add_development_dependency 'rake', '~> 10'
+  gem.add_development_dependency 'yard', '>= 0.9.11', '< 2.0'
+  gem.add_development_dependency 'rake', '>= 10', '< 20'
   gem.add_development_dependency 'bundler', '>= 1.10', '< 2'
   gem.add_development_dependency 'declare', '~> 0.0.6'
 
