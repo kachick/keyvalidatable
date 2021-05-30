@@ -1,33 +1,35 @@
-keyvalidatable
-==============
+# keyvalidatable
 
-[![Build Status](https://secure.travis-ci.org/kachick/keyvalidatable.png)](http://travis-ci.org/kachick/keyvalidatable)
+![Build Status](https://github.com/kachick/keyvalidatable/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
 [![Gem Version](https://badge.fury.io/rb/keyvalidatable.png)](http://badge.fury.io/rb/keyvalidatable)
-[![Dependency Status](https://gemnasium.com/kachick/keyvalidatable.svg)](https://gemnasium.com/kachick/keyvalidatable)
-
-Description
------------
 
 Validate shortage/excess keys in pairs.
 
-Usage
------
+## Usage
 
-### Validate option parameters(hash-argument)
+### Install
+
+Require Ruby 2.5 or later
+
+Add this line to your application/library's `Gemfile` is needed in basic use-case
+
+```ruby
+gem 'keyvalidatable', '>= 0.2.0', '< 0.3.0'
+```
+
+### Overview
 
 ```ruby
 require 'keyvalidatable'
-    
-class Foo
 
+class Foo
   def func(options)
     KeyValidatable.validate_keys options, must: [:a, :b], let: [:c]
 
     p "#{options} is valid"
-  rescue
-    p $!
+  rescue => err
+    p err
   end
-
 end
 
 foo = Foo.new
@@ -37,30 +39,7 @@ foo.func(a: 1, b: 2)             #=> "{:a=>1, :b=>2} is valid"
 foo.func(a: 1, b: 2, c: 3, d: 4) #=> InvalidKeysError: Shortage: [] / Excess: [:d]
 ```
 
-Requirements
-------------
+## Links
 
-* Ruby - [2.2 or later](http://travis-ci.org/#!/kachick/keyvalidatable)
-
-Install
--------
-
-```shell
-$ gem install keyvalidatable
-```
-
-Link
-----
-
-* [code](https://github.com/kachick/keyvalidatable)
-* [API](http://www.rubydoc.info/github/kachick/keyvalidatable)
-* [issues](https://github.com/kachick/keyvalidatable/issues)
-* [CI](http://travis-ci.org/#!/kachick/keyvalidatable)
-* [gem](https://rubygems.org/gems/keyvalidatable)
-
-License
--------
-
-The MIT X11 License  
-Copyright (c) 2012 Kenichi Kamiya  
-See MIT-LICENSE for further details.
+- [Repository](https://github.com/kachick/keyvalidatable)
+- [API documents](https://kachick.github.io/keyvalidatable)
