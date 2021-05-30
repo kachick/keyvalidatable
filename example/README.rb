@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 $VERBOSE = true
 
 require_relative '../lib/keyvalidatable'

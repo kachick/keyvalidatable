@@ -1,4 +1,5 @@
 # coding: us-ascii
+# frozen_string_literal: true
 
 require_relative 'helper'
 require_relative '../lib/keyvalidatable/core_ext'
