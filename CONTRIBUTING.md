@@ -34,13 +34,6 @@ $ echo $?
 0
 ```
 
-If you want to run partially tests, test-unit can take some patterns(String/Regexp) with the naming.
-
-```console
-$ bundle exec rake test TESTOPTS="-v -n'/test_.*foobar/i'"
-Runs test cases only for matched the pattern
-```
-
 CI includes signature check, lint, if you want to check them in own machine, below command is the one.
 
 But please don't hesitate to send PRs even if something fail in this command!
