@@ -127,7 +127,7 @@ module KeyValidatable
         raise TypeError
       end
 
-      if requirements.values.inject(&:+).empty?
+      if requirements.values.sum([]).empty?
         raise ArgumentError
       end
     end

@@ -794,6 +794,9 @@ Naming/MethodName:
 
 Naming/FileName:
   Enabled: true
+  Exclude:
+    - 'example/**/*'
+    - '**.md'
 
 Naming/ConstantName:
   Enabled: true
