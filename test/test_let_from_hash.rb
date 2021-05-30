@@ -2,52 +2,56 @@
 # frozen_string_literal: true
 
 require_relative 'helper'
-require_relative '../lib/keyvalidatable/core_ext'
+require_relative '../lib/keyvalidatable/refinements'
 
-requirements = {let: [:b]}
+module TestLetFromHash
+  using KeyValidatable::Refinements
 
-Declare.describe do
-  The({a: nil, b: nil, c: nil}.valid_keys?(requirements)) do
-    same false
-  end
+  requirements = {let: [:b]}
 
-  The({b: nil}) do |sufficient|
-    The sufficient.valid_keys?(requirements) do
-      same true
+  Declare.describe do
+    The({a: nil, b: nil, c: nil}.valid_keys?(requirements)) do
+      is false
     end
 
-    The sufficient.validate_keys(requirements) do
-      same nil
-    end
-  end
+    The({b: nil}) do |sufficient|
+      The sufficient.valid_keys?(requirements) do
+        is true
+      end
 
-  The({}) do |empty|
-    The empty.valid_keys?(requirements) do
-      same true
-    end
-
-    The empty.validate_keys(requirements) do
-      same nil
-    end
-  end
-
-  The({a: nil}) do |shortage|
-    The shortage.valid_keys?(requirements) do
-      same false
+      The sufficient.validate_keys(requirements) do
+        is nil
+      end
     end
 
-    CATCH KeyValidatable::InvalidKeysError do
-      shortage.validate_keys(requirements)
-    end
-  end
+    The({}) do |empty|
+      The empty.valid_keys?(requirements) do
+        is true
+      end
 
-  The({a: nil, b: nil}) do |excess|
-    The excess.valid_keys?(requirements) do
-      same false
+      The empty.validate_keys(requirements) do
+        is nil
+      end
     end
 
-    CATCH KeyValidatable::InvalidKeysError do
-      excess.validate_keys(requirements)
+    The({a: nil}) do |shortage|
+      The shortage.valid_keys?(requirements) do
+        is false
+      end
+
+      CATCH KeyValidatable::InvalidKeysError do
+        shortage.validate_keys(requirements)
+      end
+    end
+
+    The({a: nil, b: nil}) do |excess|
+      The excess.valid_keys?(requirements) do
+        is false
+      end
+
+      CATCH KeyValidatable::InvalidKeysError do
+        excess.validate_keys(requirements)
+      end
     end
   end
 end

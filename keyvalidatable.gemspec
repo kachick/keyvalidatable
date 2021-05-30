@@ -3,7 +3,7 @@
 
 lib_name = 'keyvalidatable'
 
-# require_relative './lib/keyvalidatable/version'
+require_relative './lib/keyvalidatable/version'
 repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = repository_url
   gem.license       = 'MIT'
   gem.name          = lib_name
-  gem.version       = '0.2.0'
+  gem.version       = KeyValidatable::VERSION
 
   gem.metadata = {
     'documentation_uri' => 'https://kachick.github.io/keyvalidatable/',

@@ -7,22 +7,22 @@ requirements = {must: [:a, :c], let: [:b]}
 
 Declare.describe do
   The(KeyValidatable.valid_array?([:a, :b, :c], requirements)) do
-    same true
+    is true
   end
 
   The([:a, :c]) do |sufficient|
     The(KeyValidatable.valid_array?(sufficient, requirements)) do
-      same true
+      is true
     end
 
     The(KeyValidatable.validate_array(sufficient, requirements)) do
-      same nil
+      is nil
     end
   end
 
   The([:a, :b]) do |shortage|
     The(KeyValidatable.valid_array?(shortage, requirements)) do
-      same false
+      is false
     end
 
     CATCH KeyValidatable::InvalidKeysError do
@@ -33,7 +33,7 @@ Declare.describe do
 
   The([:a, :b, :c, :d]) do |excess|
     The(KeyValidatable.valid_array?(excess, requirements)) do
-      same false
+      is false
     end
 
     CATCH KeyValidatable::InvalidKeysError do
