@@ -1,1 +1,3 @@
---readme README.md lib/**/*.rb --exclude core_ext - MIT-LICENSE
+--fail-on-warning
+-
+MIT-LICENSE.txt
