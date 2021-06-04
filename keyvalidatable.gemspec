@@ -35,7 +35,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rubocop-rubycw', '>= 0.1.6', '< 0.2.0'
   gem.add_development_dependency 'rubocop-md', '>= 1.0.1', '< 2.0.0'
 
-  gem.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  gem.required_ruby_version = Gem::Requirement.new('>= 2.5.0', '< 3.1.0')
 
   # common
 
