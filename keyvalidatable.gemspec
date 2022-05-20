@@ -20,7 +20,8 @@ Gem::Specification.new do |gem|
     'documentation_uri' => 'https://kachick.github.io/keyvalidatable/',
     'homepage_uri'      => repository_url,
     'source_code_uri'   => repository_url,
-    'bug_tracker_uri'   => "#{repository_url}/issues"
+    'bug_tracker_uri'   => "#{repository_url}/issues",
+    'rubygems_mfa_required' => 'true'
   }
 
   gem.add_development_dependency 'declare', '>= 0.3.0', '< 0.4.0'
