@@ -2,25 +2,13 @@
 
 * ***This repository is archived***
 * ***No longer maintained***
-* ***If someone want to use this namespace to publish new awesome gem, please [contact me](https://github.com/kachick/times_kachick/discussions/new)!***
+* ***All versions have been yanked from https://rubygems.org for releasing valuable namespace for others***
 
 ![Build Status](https://github.com/kachick/keyvalidatable/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
-[![Gem Version](https://badge.fury.io/rb/keyvalidatable.png)](http://badge.fury.io/rb/keyvalidatable)
 
 Validate shortage/excess keys in pairs.
 
 ## Usage
-
-### Install
-
-Require Ruby 2.5 or later
-(Last tested rubies are 3.0.1 and 3.1.0dev)
-
-Add this line to your`Gemfile`
-
-```ruby
-gem 'keyvalidatable', '>= 0.2.1', '< 0.3.0'
-```
 
 ### Overview
 
